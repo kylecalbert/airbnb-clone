@@ -31,11 +31,11 @@ export const GlobeContainer = styled.div`
 
 export const StyledImage = styled.img`
   width: 100%;
-  max-width: 150px; /* Reduced max-width */
+  max-width: 150px;
   height: auto;
   object-fit: contain;
   @media (max-width: 768px) {
-    max-width: 100px; /* Adjusted max-width for mobile */
+    max-width: 100px;
   }
 `;
 

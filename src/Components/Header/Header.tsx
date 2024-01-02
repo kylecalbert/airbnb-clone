@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-
+import { BsGlobe } from "react-icons/bs";
+import { Text } from "../Text/Text";
 import {
   StyledImage,
   LeftContainer,
@@ -8,6 +9,8 @@ import {
   MiddleContainer,
   StyledInput,
   StyledSearchIcon,
+  RightContainer,
+  TextContainer,
 } from "./Header.styles";
 export const Header = () => {
   return (
@@ -22,6 +25,11 @@ export const Header = () => {
           <AiOutlineSearch style={{ color: "white", width: 20, height: 20 }} />
         </StyledSearchIcon>
       </MiddleContainer>
+
+      <RightContainer>
+        <TextContainer>Become a host</TextContainer>
+        <BsGlobe />
+      </RightContainer>
     </StyledHeader>
   );
 };

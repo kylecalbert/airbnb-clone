@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// ...
+
 export const StyledHeader = styled.header`
   position: sticky;
   background: red;
@@ -10,33 +12,30 @@ export const StyledHeader = styled.header`
   background-color: white;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 15px 0 15px 10px;
+  padding: 15px 10px;
   @media (max-width: 768px) {
-    padding: 10px 0 10px 5px;
+    padding: 10px 5px;
   }
 `;
+
 export const LeftContainer = styled.div`
   display: flex;
-  position: relative;
   align-items: center;
+  padding-left: 10px;
 `;
 
 export const StyledImage = styled.img`
-  display: flex;
-  width: 50%;
-  height: 50%;
-  object-position: left;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
   object-fit: contain;
   @media (max-width: 768px) {
-    width: 60%;
-    height: 60%;
+    max-width: 150px;
   }
 `;
 
 export const MiddleContainer = styled.div`
   display: flex;
-  position: relative;
-  /* background-color: blue; */
   justify-content: center;
   align-items: center;
   border-radius: 30px;
@@ -44,7 +43,6 @@ export const MiddleContainer = styled.div`
 `;
 
 export const StyledInput = styled.input`
-  flex-grow: 1;
   padding: 10px;
   background: white;
   border: 1px solid #ccc;
@@ -65,4 +63,22 @@ export const StyledSearchIcon = styled.div`
   margin-left: 10px;
   width: 30px;
   height: 30px;
+`;
+
+export const TextContainer = styled.div`
+  font-size: 1rem;
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+`;
+
+export const RightContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Changed to flex-end for better alignment */
+  gap: 16px;
+  margin-right: 10px; /* Adjusted margin for better spacing */
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;

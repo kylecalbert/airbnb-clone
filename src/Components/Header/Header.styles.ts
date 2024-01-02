@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-// ...
-
 export const StyledHeader = styled.header`
   position: sticky;
   background: red;
@@ -21,16 +19,23 @@ export const StyledHeader = styled.header`
 export const LeftContainer = styled.div`
   display: flex;
   align-items: center;
-  padding-left: 10px;
+  background-color: GREEN;
+`;
+
+export const GlobeContainer = styled.div`
+  display: flex;
+  @media (max-width: 515px) {
+    display: none;
+  }
 `;
 
 export const StyledImage = styled.img`
   width: 100%;
-  max-width: 200px;
+  max-width: 150px; /* Reduced max-width */
   height: auto;
   object-fit: contain;
   @media (max-width: 768px) {
-    max-width: 150px;
+    max-width: 100px; /* Adjusted max-width for mobile */
   }
 `;
 
@@ -40,6 +45,7 @@ export const MiddleContainer = styled.div`
   align-items: center;
   border-radius: 30px;
   padding: 10px;
+  background-color: BLUE;
 `;
 
 export const StyledInput = styled.input`
@@ -51,6 +57,8 @@ export const StyledInput = styled.input`
   font-size: 16px;
   @media (max-width: 768px) {
     font-size: 14px;
+    height: 0.5rem;
+    width: rem;
   }
 `;
 
@@ -67,6 +75,9 @@ export const StyledSearchIcon = styled.div`
 
 export const TextContainer = styled.div`
   font-size: 1rem;
+  @media (max-width: 515px) {
+    display: none;
+  }
   @media (max-width: 768px) {
     font-size: 0.8rem;
   }
@@ -75,9 +86,25 @@ export const TextContainer = styled.div`
 export const RightContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Changed to flex-end for better alignment */
+  justify-content: flex-end;
   gap: 16px;
-  margin-right: 10px; /* Adjusted margin for better spacing */
+  margin-right: 10px;
+  background-color: yellow;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+`;
+export const MenuIcon = styled.div`
+  display: flex;
+  width: 4rem;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4rem;
+  margin-right: 3px;
+  font-size: 1.5rem;
+  color: gray;
+  justify-content: space-evenly;
   @media (max-width: 768px) {
     font-size: 1rem;
   }

@@ -1,6 +1,9 @@
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsGlobe } from "react-icons/bs";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { FaUserCircle } from "react-icons/fa";
+
 import { Text } from "../Text/Text";
 import {
   StyledImage,
@@ -11,6 +14,8 @@ import {
   StyledSearchIcon,
   RightContainer,
   TextContainer,
+  MenuIcon,
+  GlobeContainer,
 } from "./Header.styles";
 export const Header = () => {
   return (
@@ -28,7 +33,13 @@ export const Header = () => {
 
       <RightContainer>
         <TextContainer>Become a host</TextContainer>
+
         <BsGlobe />
+
+        <MenuIcon>
+          <RxHamburgerMenu />
+          <FaUserCircle />
+        </MenuIcon>
       </RightContainer>
     </StyledHeader>
   );

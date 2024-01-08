@@ -13,11 +13,16 @@ export const BannerContainer = styled.div`
   }
 `;
 
-export const TextContainer = styled.div`
+export const BannerInfo = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: 100%;
-  text-align: center;
+
+  align-items: center;
+  background-color: red;
 `;
 
 export const BannerText = styled.p`

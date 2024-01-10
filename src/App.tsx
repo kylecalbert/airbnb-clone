@@ -1,13 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { Header } from "./Components/Header/Header";
 import Banner from "./Components/Banner/Banner";
+import Explore from "./Components/Explore/Explore";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 function App() {
+  const client = new QueryClient();
+
   return (
     <div className="App">
-      <Header />
-      <Banner />
+      <QueryClientProvider client={client}>
+        <Header />
+        <Banner />
+        <Explore />
+      </QueryClientProvider>
     </div>
   );
 }

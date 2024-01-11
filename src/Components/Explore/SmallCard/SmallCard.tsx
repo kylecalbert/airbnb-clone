@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Text } from "../Text/Text";
+import { Text } from "../../Text/Text";
 interface SmallCardProps {
   img: string;
   location: string;

@@ -1,8 +1,13 @@
 import React from "react";
-import { MainContainer, SectionContainer, Heading } from "./Explore.styled";
+import {
+  MainContainer,
+  SectionContainer,
+  Heading,
+  SmallCardGrid,
+} from "./Explore.styled";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import SmallCard from "../SmallCard/SmallCard";
+import SmallCard from "./SmallCard/SmallCard";
 interface ExploreData {
   img: string;
   location: string;
@@ -31,7 +36,7 @@ export default function Explore() {
         {isLoading && <p>Loading...</p>}
         {isError && <p>Error fetching data</p>}
         {data && (
-          <div>
+          <SmallCardGrid>
             {data.map((item) => (
               <SmallCard
                 img={item.img}
@@ -39,7 +44,7 @@ export default function Explore() {
                 distance={item.distance}
               />
             ))}
-          </div>
+          </SmallCardGrid>
         )}
       </SectionContainer>
     </MainContainer>

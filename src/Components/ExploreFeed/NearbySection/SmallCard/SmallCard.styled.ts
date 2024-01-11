@@ -1,11 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import { Text } from "../../Text/Text";
-interface SmallCardProps {
-  img: string;
-  location: string;
-  distance: string;
-}
 export const SmallCardContainer = styled.div`
   display: flex;
   align-items: center;
@@ -50,17 +43,3 @@ export const DistanceText = styled.h3`
   margin-top: 0.5rem;
   color: #718096;
 `;
-
-export default function SmallCard({ img, location, distance }: SmallCardProps) {
-  return (
-    <SmallCardContainer>
-      <LeftContainer>
-        <CardImage src={img} />
-      </LeftContainer>
-      <RightContainer>
-        <LocationText>{location}</LocationText>
-        <DistanceText>{distance}</DistanceText>
-      </RightContainer>
-    </SmallCardContainer>
-  );
-}

@@ -1,33 +1,14 @@
-import React from "react";
 import {
   MainContainer,
   SectionContainer,
   Heading,
   SmallCardGrid,
 } from "./Explore.styled";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import SmallCard from "./SmallCard/SmallCard";
-interface ExploreData {
-  img: string;
-  location: string;
-  distance: string;
-}
+import ExploreData from "./ExoloreData";
 
-export default function Explore() {
-  const fetchData = async () => {
-    console.log("here 1");
-    const response = await axios.get(
-      "https://api.npoint.io/cf42e9b600d5b1b9a72d"
-    );
-    console.log("here2 ");
-    return response.data;
-  };
-
-  const { isLoading, data, isError } = useQuery<ExploreData[]>({
-    queryKey: ["data"],
-    queryFn: fetchData,
-  });
+const Explore = () => {
+  const { isLoading, data, isError } = ExploreData();
 
   return (
     <MainContainer>
@@ -37,7 +18,7 @@ export default function Explore() {
         {isError && <p>Error fetching data</p>}
         {data && (
           <SmallCardGrid>
-            {data.map((item) => (
+            {data.map((item: ExploreData) => (
               <SmallCard
                 img={item.img}
                 location={item.location}
@@ -49,4 +30,6 @@ export default function Explore() {
       </SectionContainer>
     </MainContainer>
   );
-}
+};
+
+export default Explore;

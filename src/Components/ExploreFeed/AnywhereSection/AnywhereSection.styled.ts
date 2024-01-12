@@ -1,6 +1,5 @@
 import styled from "styled-components";
 export const SectionContainer = styled.section`
-  padding-top: 0.2rem;
   background-color: green;
 `;
 
@@ -14,6 +13,7 @@ export const MediumCardGrid = styled.div`
   overflow-y: scroll;
   padding: 1rem;
   margin-left: -1rem;
+  margin-top: -1rem;
 
   grid-template-columns: repeat(1, 1fr);
   @media (min-width: 768px) {

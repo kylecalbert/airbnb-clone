@@ -3,6 +3,7 @@ export const SmallCardContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 1rem;
+  background-color: red;
   gap: 4rem;
   transition:
     background-color 0.3s ease,

@@ -10,7 +10,3 @@ export const MainContainer = styled.main`
     padding-left: 16px;
   }
 `;
-
-export const SectionContainer = styled.section`
-  padding-top: 0.2rem;
-`;

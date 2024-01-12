@@ -2,6 +2,7 @@ import styled from "styled-components";
 export const SectionContainer = styled.section``;
 
 export const Heading = styled.h2`
+  ///can be resuable
   font-size: 2.25rem;
   font-weight: 600;
 `;

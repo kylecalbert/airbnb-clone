@@ -12,7 +12,8 @@ export const MediumCardContainer = styled.div`
   }
 `;
 export const CardImage = styled.img`
-  object-fit: fill;
+  //potentially resuable  (create a card image container)
+  object-fit: cover;
   border-radius: 0.3rem;
   display: flex;
   position: relative;

@@ -7,16 +7,15 @@ interface AnywhereSectionData {
 
 const AnywhereSectionData = () => {
   const fetchData = async () => {
-    console.log("here 1");
     const response = await axios.get(
-      "https://api.npoint.io/cf42e9b600d5b1b9a72d"
+      "https://api.npoint.io/c0e0092ff729463d0176"
     );
 
     return response.data;
   };
 
   const { isLoading, data, isError } = useQuery<AnywhereSectionData[]>({
-    queryKey: ["data"],
+    queryKey: ["data2"],
     queryFn: fetchData,
   });
   return { isLoading, data, isError };

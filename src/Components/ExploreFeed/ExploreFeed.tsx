@@ -1,10 +1,11 @@
 import { MainContainer } from "./ExploreFeed.styled";
-import SmallCard from "./NearbySection/SmallCard/SmallCard";
 import NearbySection from "./NearbySection/NearbySection";
+import AnywhereSection from "./AnywhereSection/AnywhereSection";
 const ExploreFeed = () => {
   return (
     <MainContainer>
       <NearbySection />
+      <AnywhereSection />
     </MainContainer>
   );
 };

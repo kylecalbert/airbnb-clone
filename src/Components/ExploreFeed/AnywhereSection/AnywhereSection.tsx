@@ -3,24 +3,26 @@ import React from "react";
 import {
   SectionContainer,
   Heading,
-  SmallCardGrid,
+  MediumCardGrid,
 } from "./AnywhereSection.styled";
-import AnywhereSectionData from "./AnywhereSectionData";
+
 import MediumCard from "./MediumCard/MediumCard";
-export default function NearbySection() {
+
+import AnywhereSectionData from "./AnywhereSectionData";
+export default function AnywhereSection() {
   const { isLoading, data, isError } = AnywhereSectionData();
 
   return (
     <SectionContainer>
-      <Heading>Explore Nearby</Heading>
+      <Heading>Live Anywhere</Heading>
       {isLoading && <p>Loading...</p>}
       {isError && <p>Error fetching data</p>}
       {data && (
-        <SmallCardGrid>
+        <MediumCardGrid>
           {data.map((item: AnywhereSectionData) => (
             <MediumCard img={item.img} title={item.title} />
           ))}
-        </SmallCardGrid>
+        </MediumCardGrid>
       )}
     </SectionContainer>
   );

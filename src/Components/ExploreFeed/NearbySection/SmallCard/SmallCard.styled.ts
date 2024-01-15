@@ -3,7 +3,7 @@ export const SmallCardContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 1rem;
-  background-color: red;
+  /* background-color: red; */
   gap: 4rem;
   transition:
     background-color 0.3s ease,
@@ -29,6 +29,7 @@ export const RightContainer = styled.div`
 `;
 
 export const CardImage = styled.img`
+  //potentially resuable
   object-fit: fill;
   border-radius: 0.3rem;
 `;

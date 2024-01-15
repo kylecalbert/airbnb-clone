@@ -4,7 +4,7 @@ export const MainContainer = styled.main`
   max-width: 80rem;
   margin: 0 auto;
   padding-left: 2rem;
-  background-color: blue;
+  /* background-color: blue; */
 
   @media (max-width: 768px) {
     padding-left: 16px;

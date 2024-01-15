@@ -22,7 +22,7 @@ export const BannerInfo = styled.div`
   width: 100%;
 
   align-items: center;
-  background-color: red;
+  /* background-color: red; */
 `;
 
 export const BannerText = styled.p`

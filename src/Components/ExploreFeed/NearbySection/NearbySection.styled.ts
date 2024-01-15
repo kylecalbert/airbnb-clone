@@ -1,26 +1,14 @@
 import styled from "styled-components";
-
-export const MainContainer = styled.main`
-  max-width: 80rem;
-  margin: 0 auto;
-  padding-left: 2rem;
-
-  @media (max-width: 768px) {
-    padding-left: 16px;
-  }
-`;
-
-export const SectionContainer = styled.section`
-  padding-top: 0.2rem;
-`;
+export const SectionContainer = styled.section``;
 
 export const Heading = styled.h2`
+  ///can be resuable
   font-size: 2.25rem;
   font-weight: 600;
-  padding-bottom: 1.25rem;
 `;
 export const SmallCardGrid = styled.div`
   display: grid;
+  margin-top: -1rem;
   grid-template-columns: repeat(1, 1fr);
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);

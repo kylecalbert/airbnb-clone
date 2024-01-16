@@ -4,7 +4,7 @@ import { Header } from "./Components/Header/Header";
 import Banner from "./Components/Banner/Banner";
 import ExploreFeed from "./Components/ExploreFeed/ExploreFeed";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
+import Footer from "./Components/Footer/Footer";
 function App() {
   const client = new QueryClient();
 
@@ -14,6 +14,7 @@ function App() {
         <Header />
         <Banner />
         <ExploreFeed />
+        <Footer />
       </QueryClientProvider>
     </div>
   );

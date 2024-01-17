@@ -81,7 +81,7 @@ export const StyledSearchIcon = styled.div`
 
   @media (min-width: 768px) {
     display: flex;
-    margin: 0 0.6 rem;
+    margin: 0 0.6rem;
   }
 `;
 export const TextContainer = styled.div`

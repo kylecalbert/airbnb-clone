@@ -39,24 +39,31 @@ export const GlobeContainer = styled.div`
 
 export const MiddleContainer = styled.div`
   display: flex;
-  border: 2px solid;
   align-items: center;
+
   border-radius: 9999px;
-  padding: 2px 0;
-  background-color: BLUE;
+  padding: 0.5rem 0;
+  border: 2px solid transparent;
+
+  /* background-color: BLUE; */
+  @media (min-width: 768px) {
+    border: 2px solid #ccc;
+  }
 `;
 
 export const StyledInput = styled.input`
-  padding: 10px;
+  padding: 1rem;
   background: white;
-  border: 1px solid #ccc;
+  flex: 1;
   border-radius: 30px;
   outline: none;
+  border: none;
+
   font-size: 16px;
   @media (max-width: 768px) {
     font-size: 14px;
     height: 0.5rem;
-    width: rem;
+    border: 2px solid #ccc;
   }
 `;
 
@@ -66,13 +73,15 @@ export const StyledSearchIcon = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  margin-left: 0.4rem;
+  margin-left: 0.5rem;
+
   width: 2rem;
   height: 2rem;
   display: none;
 
   @media (min-width: 768px) {
     display: flex;
+    margin: 0 0.6 rem;
   }
 `;
 export const TextContainer = styled.div`

@@ -20,6 +20,7 @@ export const Container = styled.div`
 `;
 const StyledHeading = styled.h5`
   font-weight: bold;
+  font-size: 1rem;
 `;
 
 export const FooterText = styled.p``;

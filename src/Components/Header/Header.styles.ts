@@ -2,26 +2,34 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   position: sticky;
-  background: red;
   top: 0;
   z-index: 50;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: white;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 15px 10px;
-  @media (max-width: 768px) {
-    padding: 10px 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  @media (min-width: 768px) {
+    padding: 1.5rem 1.5rem;
   }
 `;
 
 export const LeftContainer = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
-  background-color: GREEN;
+  cursor: pointer;
+  margin: auto 0;
 `;
-
+export const StyledImage = styled.img`
+  width: 100%;
+  max-width: 8rem;
+  height: auto;
+  object-fit: contain;
+  @media (max-width: 768px) {
+    max-width: 100px;
+  }
+`;
 export const GlobeContainer = styled.div`
   display: flex;
   @media (max-width: 515px) {
@@ -29,22 +37,12 @@ export const GlobeContainer = styled.div`
   }
 `;
 
-export const StyledImage = styled.img`
-  width: 100%;
-  max-width: 150px;
-  height: auto;
-  object-fit: contain;
-  @media (max-width: 768px) {
-    max-width: 100px;
-  }
-`;
-
 export const MiddleContainer = styled.div`
   display: flex;
-  justify-content: center;
+  border: 2px solid;
   align-items: center;
-  border-radius: 30px;
-  padding: 10px;
+  border-radius: 9999px;
+  padding: 2px 0;
   background-color: BLUE;
 `;
 
@@ -68,15 +66,18 @@ export const StyledSearchIcon = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  margin-left: 10px;
-  width: 30px;
-  height: 30px;
-`;
+  margin-left: 0.4rem;
+  width: 2rem;
+  height: 2rem;
+  display: none;
 
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`;
 export const TextContainer = styled.div`
   font-size: 1rem;
   @media (max-width: 515px) {
-    display: none;
   }
   @media (max-width: 768px) {
     font-size: 0.8rem;

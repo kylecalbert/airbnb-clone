@@ -30,12 +30,6 @@ export const StyledImage = styled.img`
     max-width: 100px;
   }
 `;
-export const GlobeContainer = styled.div`
-  display: flex;
-  @media (max-width: 515px) {
-    display: none;
-  }
-`;
 
 export const MiddleContainer = styled.div`
   display: flex;
@@ -74,7 +68,6 @@ export const StyledSearchIcon = styled.div`
   justify-content: center;
   border-radius: 50%;
   margin-left: 0.5rem;
-
   width: 2rem;
   height: 2rem;
   display: none;
@@ -84,26 +77,36 @@ export const StyledSearchIcon = styled.div`
     margin: 0 0.6rem;
   }
 `;
-export const TextContainer = styled.div`
-  font-size: 1rem;
-  @media (max-width: 515px) {
-  }
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
-  }
-`;
 
 export const RightContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 16px;
-  margin-right: 10px;
-  background-color: yellow;
+  gap: 0.8rem;
+  margin-right: 0.5rem;
+  /* background-color: yellow; */
   @media (max-width: 768px) {
     font-size: 1rem;
   }
 `;
+
+export const GlobeContainer = styled.div`
+  display: flex;
+  @media (max-width: 515px) {
+    display: none;
+  }
+`;
+
+export const TextContainer = styled.div`
+  font-size: 1rem;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    font-size: 0.8rem;
+  }
+`;
+
 export const MenuIcon = styled.div`
   display: flex;
   width: 4rem;
@@ -111,7 +114,6 @@ export const MenuIcon = styled.div`
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4rem;
-  margin-right: 3px;
   font-size: 1.5rem;
   color: gray;
   justify-content: space-evenly;

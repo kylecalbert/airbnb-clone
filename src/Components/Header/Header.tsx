@@ -31,7 +31,7 @@ export const Header = () => {
         </StyledSearchIcon>
       </MiddleContainer>
 
-      {/* <RightContainer>
+      <RightContainer>
         <TextContainer>Become a host</TextContainer>
 
         <BsGlobe />
@@ -40,7 +40,7 @@ export const Header = () => {
           <RxHamburgerMenu />
           <FaUserCircle />
         </MenuIcon>
-      </RightContainer>  */}
+      </RightContainer>
     </StyledHeader>
   );
 };

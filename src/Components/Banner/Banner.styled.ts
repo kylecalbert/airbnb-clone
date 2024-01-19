@@ -1,15 +1,15 @@
 import styled from "styled-components";
 export const BannerContainer = styled.div`
   position: relative;
-  height: 300px;
+  height: 18.75rem;
   @media (min-width: 640px) {
-    height: 400px;
+    height: 25rem;
   }
   @media (min-width: 1024px) {
-    height: 500px;
+    height: 31.25rem;
   }
   @media (min-width: 1280px) {
-    height: 600px;
+    height: 37.5rem;
   }
 `;
 
@@ -20,9 +20,7 @@ export const BannerInfo = styled.div`
   position: absolute;
   top: 40%;
   width: 100%;
-
   align-items: center;
-  /* background-color: red; */
 `;
 
 export const BannerText = styled.p`

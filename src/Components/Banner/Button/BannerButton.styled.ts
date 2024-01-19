@@ -13,7 +13,9 @@ export const StyledButton = styled.div`
   width: 5rem;
   height: 1.3rem;
   font-size: 0.7rem;
-  transition: box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
+  transition:
+    box-shadow 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
 
   @media (min-width: 768px) {
     height: 2rem;

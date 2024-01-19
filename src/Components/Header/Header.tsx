@@ -4,7 +4,6 @@ import { BsGlobe } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaUserCircle } from "react-icons/fa";
 
-import { Text } from "../Text/Text";
 import {
   StyledImage,
   LeftContainer,

@@ -1,23 +1,18 @@
 import React, { useState } from "react";
-import { AiOutlineSearch } from "react-icons/ai";
 import { BsGlobe } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaUserCircle } from "react-icons/fa";
-import "react-date-range/dist/styles.css"; // main style file
-import "react-date-range/dist/theme/default.css"; // theme css file
-import { DateRangePicker } from "react-date-range";
 
+import DateSelection from "../DateSelection/DateSelection";
+import SearchComponent from "../SearchComponent/SearchComponent";
 import {
   StyledImage,
   LeftContainer,
   StyledHeader,
   MiddleContainer,
-  StyledInput,
-  StyledSearchIcon,
   RightContainer,
   TextContainer,
   MenuIcon,
-  DateRangeContainer,
 } from "./Header.styles";
 export const Header = () => {
   const [searchInput, setSearchInput] = useState<string>("");
@@ -42,13 +37,10 @@ export const Header = () => {
       </LeftContainer>
 
       <MiddleContainer>
-        <StyledInput
-          value={searchInput}
-          onChange={(event) => setSearchInput(event.target.value)}
+        <SearchComponent
+          searchInput={searchInput}
+          setSearchInput={setSearchInput}
         />
-        <StyledSearchIcon>
-          <AiOutlineSearch style={{ color: "white", width: 20, height: 20 }} />
-        </StyledSearchIcon>
       </MiddleContainer>
 
       <RightContainer>
@@ -62,16 +54,7 @@ export const Header = () => {
         </MenuIcon>
       </RightContainer>
 
-      {searchInput && (
-        <DateRangeContainer>
-          <DateRangePicker
-            ranges={[selectionRange]}
-            minDate={new Date()}
-            rangeColors={["#FD5B61"]}
-            onChange={handleSelect}
-          />
-        </DateRangeContainer>
-      )}
+      {searchInput && <DateSelection />}
     </StyledHeader>
   );
 };

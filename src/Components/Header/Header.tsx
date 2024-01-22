@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsGlobe } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -17,6 +17,7 @@ import {
   GlobeContainer,
 } from "./Header.styles";
 export const Header = () => {
+  const [searchInput, setSearchInput] = useState<String>("");
   return (
     <StyledHeader>
       <LeftContainer>

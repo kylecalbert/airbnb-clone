@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { BsGlobe } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaUserCircle } from "react-icons/fa";
-
 import DateSelection from "../DateSelection/DateSelection";
 import SearchComponent from "../SearchComponent/SearchComponent";
 import {
@@ -14,21 +13,9 @@ import {
   TextContainer,
   MenuIcon,
 } from "./Header.styles";
-export const Header = () => {
+
+export const Header: React.FC = () => {
   const [searchInput, setSearchInput] = useState<string>("");
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
-
-  const selectionRange = {
-    startDate: startDate,
-    endDate: endDate,
-    key: "selection",
-  };
-
-  const handleSelect = (ranges: any) => {
-    setStartDate(ranges.selection.startDate);
-    setEndDate(ranges.selection.endDate);
-  };
 
   return (
     <StyledHeader>

@@ -1,11 +1,21 @@
 import React, { useState } from "react";
-import "react-date-range/dist/styles.css"; // main style file
-import "react-date-range/dist/theme/default.css"; // theme css file
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
-import { DateRangeContainer } from "./DateSelection.styled";
-const DateSelection = () => {
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+import { HiUsers } from "react-icons/hi";
+
+import {
+  DateRangeContainer,
+  GuestIcon,
+  GuestSectionContainer,
+  StyledInput,
+  StyledFlexContainer,
+  StyledHeading,
+} from "./DateSelection.styled";
+
+const DateSelection: React.FC = () => {
+  const [startDate, setStartDate] = useState<Date>(new Date());
+  const [endDate, setEndDate] = useState<Date>(new Date());
 
   const selectionRange = {
     startDate: startDate,
@@ -26,8 +36,15 @@ const DateSelection = () => {
         rangeColors={["#FD5B61"]}
         onChange={handleSelect}
       />
-
-      <h2>Number of Guests</h2>
+      <GuestSectionContainer>
+        <StyledFlexContainer>
+          <StyledHeading>Number of Guests</StyledHeading>
+          <StyledInput type="number" placeholder="Enter guests" />
+          <GuestIcon>
+            <HiUsers />
+          </GuestIcon>
+        </StyledFlexContainer>
+      </GuestSectionContainer>
     </DateRangeContainer>
   );
 };

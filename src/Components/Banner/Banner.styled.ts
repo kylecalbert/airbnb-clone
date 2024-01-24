@@ -2,6 +2,8 @@ import styled from "styled-components";
 export const BannerContainer = styled.div`
   position: relative;
   height: 18.75rem;
+  background-color: blue;
+  width: 100%;
   @media (min-width: 640px) {
     height: 25rem;
   }
@@ -22,7 +24,6 @@ export const BannerInfo = styled.div`
   width: 100%;
   align-items: center;
 `;
-
 export const BannerText = styled.p`
   font-size: 1rem;
   @media (min-width: 640px) {

@@ -1,23 +1,22 @@
 import React, { useState } from "react";
-import { AiOutlineSearch } from "react-icons/ai";
 import { BsGlobe } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaUserCircle } from "react-icons/fa";
-
+import DateSelection from "../DateSelection/DateSelection";
+import SearchComponent from "../SearchComponent/SearchComponent";
 import {
   StyledImage,
   LeftContainer,
   StyledHeader,
   MiddleContainer,
-  StyledInput,
-  StyledSearchIcon,
   RightContainer,
   TextContainer,
   MenuIcon,
-  GlobeContainer,
 } from "./Header.styles";
-export const Header = () => {
-  const [searchInput, setSearchInput] = useState<String>("");
+
+export const Header: React.FC = () => {
+  const [searchInput, setSearchInput] = useState<string>("");
+
   return (
     <StyledHeader>
       <LeftContainer>
@@ -25,10 +24,10 @@ export const Header = () => {
       </LeftContainer>
 
       <MiddleContainer>
-        <StyledInput />
-        <StyledSearchIcon>
-          <AiOutlineSearch style={{ color: "white", width: 20, height: 20 }} />
-        </StyledSearchIcon>
+        <SearchComponent
+          searchInput={searchInput}
+          setSearchInput={setSearchInput}
+        />
       </MiddleContainer>
 
       <RightContainer>
@@ -41,6 +40,8 @@ export const Header = () => {
           <FaUserCircle />
         </MenuIcon>
       </RightContainer>
+
+      {searchInput && <DateSelection />}
     </StyledHeader>
   );
 };

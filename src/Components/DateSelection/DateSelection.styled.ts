@@ -63,3 +63,21 @@ export const StyledHeading = styled.h2`
   font-weight: bold;
   margin-right: 0.5rem;
 `;
+
+export const SearchCancelContainer = styled.div`
+  display: flex;
+
+  justify-content: space-between;
+  width: 15rem;
+`;
+export const SearchButton = styled.button`
+  background-color: transparent;
+  color: #ef4444;
+  border: none;
+`;
+
+export const CancelButton = styled.button`
+  background-color: transparent;
+  color: #6b7280;
+  border: none;
+`;

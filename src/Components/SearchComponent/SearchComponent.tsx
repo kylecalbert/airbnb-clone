@@ -2,15 +2,11 @@ import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { StyledInput, StyledSearchIcon } from "./SearchComponent.styled";
 
-interface SearchComponentProps {
-  searchInput: string;
-  setSearchInput: React.Dispatch<React.SetStateAction<string>>;
-}
+import { useSearchContext } from "../SearchContext/SearchContext";
 
-const SearchComponent: React.FC<SearchComponentProps> = ({
-  searchInput,
-  setSearchInput,
-}) => {
+const SearchComponent: React.FC = () => {
+  const { searchInput, setSearchInput } = useSearchContext();
+
   return (
     <>
       <StyledInput

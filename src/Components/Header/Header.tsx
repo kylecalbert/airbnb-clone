@@ -13,10 +13,9 @@ import {
   TextContainer,
   MenuIcon,
 } from "./Header.styles";
-
+import { useSearchContext } from "../SearchContext/SearchContext";
 export const Header: React.FC = () => {
-  const [searchInput, setSearchInput] = useState<string>("");
-
+  const { searchInput } = useSearchContext();
   return (
     <StyledHeader>
       <LeftContainer>
@@ -24,10 +23,7 @@ export const Header: React.FC = () => {
       </LeftContainer>
 
       <MiddleContainer>
-        <SearchComponent
-          searchInput={searchInput}
-          setSearchInput={setSearchInput}
-        />
+        <SearchComponent />
       </MiddleContainer>
 
       <RightContainer>
